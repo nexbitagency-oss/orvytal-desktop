@@ -30,10 +30,11 @@ builder
       directories: { output: `dist/${key}`, buildResources: `build/${key}` },
       files: ["main.js", "offline.html", "apps.json", "package.json"],
       extraMetadata: { orvytalApp: key, name: `orvytal-${key}`, version: pkg.version },
+      afterPack: require("path").join(__dirname, "adhoc-sign.js"),
       icon: `build/${key}/icon.png`,
       mac: {
         category: "public.app-category.business",
-        identity: "-",
+        identity: null,
         artifactName: `${cfg.file}-Mac-\${arch}.\${ext}`,
       },
       dmg: { title: cfg.name },
