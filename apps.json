@@ -1,0 +1,23 @@
+{
+  "x": {
+    "name": "ORVYTAL X",
+    "file": "ORVYTAL-X",
+    "appId": "net.orvytal.x",
+    "url": "https://x.orvytal.net/",
+    "color": "#ffffff"
+  },
+  "crm": {
+    "name": "ORVYTAL CRM",
+    "file": "ORVYTAL-CRM",
+    "appId": "net.orvytal.crm",
+    "url": "https://crm.orvytal.net/",
+    "color": "#ffffff"
+  },
+  "pay": {
+    "name": "ORVYPAY",
+    "file": "ORVYPAY",
+    "appId": "net.orvytal.pay",
+    "url": "https://pay.orvytal.net/app",
+    "color": "#ffffff"
+  }
+}

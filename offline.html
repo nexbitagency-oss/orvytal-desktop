@@ -1,0 +1,15 @@
+<!doctype html>
+<html lang="es"><head><meta charset="utf-8"><title>Sin conexión</title>
+<style>
+html,body{height:100%;margin:0;font-family:system-ui,-apple-system,Segoe UI,sans-serif;background:#fff;color:#0a0a0a}
+main{height:100%;display:grid;place-content:center;text-align:center;gap:10px;padding:24px}
+h1{font-size:24px;margin:0}p{margin:0;color:#666}
+button{margin-top:14px;height:42px;padding:0 22px;border:0;border-radius:999px;background:#1f5bff;color:#fff;font-size:14px;font-weight:600;cursor:pointer;box-shadow:0 8px 24px -8px #1f5bff}
+</style></head><body><main>
+<h1>Sin conexión</h1><p>No pudimos conectar con ORVYTAL. Revisa tu internet e inténtalo de nuevo.</p>
+<button id="r">Reintentar</button></main>
+<script>
+const u=new URLSearchParams(location.search).get("url")||"https://orvytal.net";
+document.getElementById("r").onclick=()=>{location.href=u};
+addEventListener("online",()=>{location.href=u});
+</script></body></html>
