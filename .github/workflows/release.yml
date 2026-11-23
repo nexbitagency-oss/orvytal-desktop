@@ -4,6 +4,10 @@ on:
   push:
     tags: ["v*"]
   workflow_dispatch:
+    inputs:
+      tag:
+        description: "Versión a publicar (p. ej. v1.0.0)"
+        default: "v1.0.0"
 
 permissions:
   contents: write
@@ -46,6 +50,7 @@ jobs:
       - run: ls -la out
       - uses: softprops/action-gh-release@v2
         with:
-          tag_name: ${{ github.ref_name }}
-          name: ORVYTAL Desktop ${{ github.ref_name }}
+          tag_name: ${{ inputs.tag || github.ref_name }}
+          target_commitish: ${{ github.sha }}
+          name: ORVYTAL Desktop ${{ inputs.tag || github.ref_name }}
           files: out/*
